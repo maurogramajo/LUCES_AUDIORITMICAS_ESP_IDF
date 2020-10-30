@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/grama/esp-idf/workspace/adc/build/bootloader/esp-idf/cmake_install.cmake")
+  include("C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/grama/esp-idf/workspace/adc/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

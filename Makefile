@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := adc
+PROJECT_NAME := LUCES_AUDIORITMICAS_ESP_IDF
 
 include $(IDF_PATH)/make/project.mk
 

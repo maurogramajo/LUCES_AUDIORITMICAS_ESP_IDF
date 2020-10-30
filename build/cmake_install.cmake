@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/grama/esp-idf/workspace/adc
+# Install script for directory: C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/adc")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/LUCES_AUDIORITMICAS_ESP_IDF")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/grama/esp-idf/workspace/adc/build/esp-idf/cmake_install.cmake")
+  include("C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/grama/esp-idf/workspace/adc/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

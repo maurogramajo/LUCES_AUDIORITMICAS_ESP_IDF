@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/queue.h"
 #include "driver/gpio.h"
 #include "driver/adc.h"
 #if CONFIG_IDF_TARGET_ESP32
@@ -17,6 +18,8 @@
 #endif
 
 #include "soc/rtc.h"
+#include "driver/i2s.h"
+#include "soc/syscon_reg.h"
 
 #define CORE0   0
 #define CORE1   1
@@ -31,6 +34,14 @@ static const adc_channel_t canal = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 i
 
 static const adc_atten_t atenuacion = ADC_ATTEN_DB_11;
 
+static xQueueHandle i2s_queue = NULL;
+
+static void IRAM_ATTR i2s_isr_handle(void* arg)
+{
+    printf("entre a la interrupcion mama\n");
+    xQueueSendFromISR(i2s_queue, NULL, NULL);
+
+}
 
 void tFourier(void *a) {
     static const int i2s_num = 0; // i2s port number
@@ -38,8 +49,8 @@ void tFourier(void *a) {
         .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX | I2S_MODE_ADC_BUILT_IN),
         .sample_rate = SAMPLING_RATE,
         .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
-        .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
-        .communication_format = I2S_COMM_FORMAT_I2S_LSB,
+        .channel_format = I2S_CHANNEL_FMT_ALL_LEFT,
+        .communication_format = I2S_COMM_FORMAT_I2S_MSB,
         .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
         .dma_buf_count = 4,
         .dma_buf_len = NO_OF_SAMPLES,
@@ -53,11 +64,14 @@ void tFourier(void *a) {
     i2s_driver_install(I2S_NUM_0, &i2s_config, 0, NULL);
     i2s_set_adc_mode(ADC_UNIT_1, canal);    //USO ADC1 PORQUE ADC2 NO FUNCIONA CON WIFI
     SET_PERI_REG_MASK(SYSCON_SARADC_CTRL2_REG, SYSCON_SARADC_SAR1_INV);
+    esp_intr_alloc(i2s_num, i2s_config.intr_alloc_flags, &i2s_isr_handle, 0, NULL);
     i2s_adc_enable(I2S_NUM_0);
-    
+    printf("Inicio I2S\n");
 
+    int data32;
     while(1) {
-
+        xQueueReceive(i2s_queue, &data32, portMAX_DELAY);
+        printf("ME DEJO ENTRAR LA INTERRUPCION MAMA!!");
     }
 }
 
@@ -143,8 +157,9 @@ void app_main(void)
     print_char_val_type(val_type);
 #endif
 */
-
+    i2s_queue = xQueueCreate(10, sizeof(uint32_t));
     xTaskCreatePinnedToCore(tTomarMuestra, "TomarMuestra", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, 0, CORE0);
+    xTaskCreatePinnedToCore(tFourier, "FFT", configMINIMAL_STACK_SIZE*5, NULL, tskIDLE_PRIORITY+1, 0, CORE0);
 /*
     //Continuously sample ADC1
     while (1) {

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/grama/esp-idf/workspace/adc/main
+# Install script for directory: C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/adc")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/LUCES_AUDIORITMICAS_ESP_IDF")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

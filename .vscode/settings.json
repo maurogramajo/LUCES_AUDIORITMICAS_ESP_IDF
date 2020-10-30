@@ -8,12 +8,16 @@
     "editor.quickSuggestions": true
   },
   "C_Cpp.intelliSenseEngineFallback": "Enabled",
-  "idf.portWin": "COM4",
+  "idf.portWin": "COM3",
   "files.associations": {
     "esp_adc_cal.h": "c",
     "adc.h": "c",
     "rtc.h": "c",
     "gpio.h": "c",
-    "esp_types.h": "c"
+    "esp_types.h": "c",
+    "syscon_reg.h": "c",
+    "i2s.h": "c",
+    "esp_intr_alloc.h": "c",
+    "esp_attr.h": "c"
   }
 }
