@@ -1,0 +1,19 @@
+{
+  "C_Cpp.clang_format_style": "Visual Studio",
+  "editor.formatOnSave": false,
+  "[cpp]": {
+    "editor.quickSuggestions": true
+  },
+  "[c]": {
+    "editor.quickSuggestions": true
+  },
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "idf.portWin": "COM4",
+  "files.associations": {
+    "esp_adc_cal.h": "c",
+    "adc.h": "c",
+    "rtc.h": "c",
+    "gpio.h": "c",
+    "esp_types.h": "c"
+  }
+}
