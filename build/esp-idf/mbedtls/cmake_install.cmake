@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 
 endif()
 

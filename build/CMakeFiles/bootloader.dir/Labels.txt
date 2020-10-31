@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader-complete.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/PROYECTOS/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/CMakeFiles/bootloader-complete.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/grama/esp-idf/workspace/LUCES_AUDIORITMICAS_ESP_IDF/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
